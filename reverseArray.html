@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse an Array</title>
+    <script>
+        let array = [12, 32, 25, 39, 26, 33, 15, 11];
+        console.warn(`My array is ${array}`);
+        //by default array reverse
+        // array.reverse();
+        let temp;
+        function reverse(array, first, last) {
+            if (first <= last) {
+                temp = array[first];
+                array[first] = array[last];
+                array[last] = temp;
+                reverse(array, first + 1, last - 1);     
+            }
+        }
+        reverse(array, 0, array.length - 1);
+        console.warn(`The Reverse Array ${array}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
